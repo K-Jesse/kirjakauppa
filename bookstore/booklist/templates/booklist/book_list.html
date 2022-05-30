@@ -1,0 +1,20 @@
+Book list
+
+	<a href="/books/create">
+			create
+	</a>
+
+{% for book in object_list %}
+	<p>
+		
+		<a href="{{ book.get_absolute_url }}">
+			{{ book.name }}
+		</a>
+		<a href="{{ book.get_absolute_url }}/update">
+			update
+		</a>
+		<a href="{{ book.get_absolute_url }}/delete">
+			delete
+		</a>
+	</p>
+{% endfor %}
